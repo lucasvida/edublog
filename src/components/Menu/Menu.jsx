@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Posts from '../../pages/Posts';
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,13 +83,22 @@ const Menu = () => {
           Início
         </NavLink>
         <NavLink 
+          to="/posts" 
+          className={({ isActive }) => 
+            isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"
+          }
+        >
+          Posts
+        </NavLink>
+        <NavLink 
           to="/matematica" 
           className={({ isActive }) => 
             isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"
           }
         >
-          Matemática
+             Matemática
         </NavLink>
+        
         <NavLink 
           to="/ciencias" 
           className={({ isActive }) => 
