@@ -6,10 +6,6 @@ import PopularTags from "./PopularTags";
 const Sidebar = () => {
   return (
     <div className="w-full lg:w-80">
-      <SearchBar />
-      <Categories />
-      <PopularPosts />
-      <PopularTags />
     </div>
   );
 };

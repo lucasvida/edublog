@@ -1,6 +1,5 @@
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import Posts from '../../pages/Posts';
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,14 +73,7 @@ const Menu = () => {
 
       {/* Navigation Links - Desktop */}
       <nav className="hidden md:flex space-x-6">
-        <NavLink 
-          to="/" 
-          className={({ isActive }) => 
-            isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"
-          }
-        >
-          Início
-        </NavLink>
+       
         <NavLink 
           to="/posts" 
           className={({ isActive }) => 
@@ -89,39 +81,6 @@ const Menu = () => {
           }
         >
           Posts
-        </NavLink>
-        <NavLink 
-          to="/matematica" 
-          className={({ isActive }) => 
-            isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"
-          }
-        >
-             Matemática
-        </NavLink>
-        
-        <NavLink 
-          to="/ciencias" 
-          className={({ isActive }) => 
-            isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"
-          }
-        >
-          Ciências
-        </NavLink>
-        <NavLink 
-          to="/historia" 
-          className={({ isActive }) => 
-            isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"
-          }
-        >
-          História
-        </NavLink>
-        <NavLink 
-          to="/literatura" 
-          className={({ isActive }) => 
-            isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"
-          }
-        >
-          Literatura
         </NavLink>
         <NavLink 
           to="/sobre" 
@@ -225,27 +184,7 @@ const Menu = () => {
       {/* Search Bar and Login Button */}
       {mounted && (
         <div className="hidden md:flex items-center space-x-4">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Buscar artigos..."
-              className="pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </div>
+         
           
           {/* Login Button */}
           <NavLink 

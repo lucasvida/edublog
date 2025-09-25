@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Menu from './components/Menu/Menu';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
+import Menu from './components/Menu/Menu';
 import Home from './pages/Home';
 import Posts from './pages/Posts';
 
