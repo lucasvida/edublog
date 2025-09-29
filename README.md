@@ -1,12 +1,132 @@
-# React + Vite
+# EduBlog - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um blog educacional desenvolvido em React com integração completa à API REST.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ✅ Implementadas
 
-## Expanding the ESLint configuration
+- **Autenticação JWT**: Sistema de login com token automático
+- **Página Principal**: Lista todos os posts
+- **Lista de Posts**: Exibe todos os posts com funcionalidade de busca
+- **Detalhes do Post**: Visualização completa de cada post
+- **Área Administrativa**: CRUD completo para gerenciar posts
+- **Responsividade**: Interface adaptável para mobile e desktop
+- **Busca**: Pesquisa por título
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎯 Páginas
+
+- `/` - Redireciona para /posts
+- `/posts` - Lista completa de posts com busca
+- `/post/:id` - Visualização individual do post
+- `/login` - Autenticação para área administrativa
+- `/admin` - Painel administrativo
+- `/admin/new-post` - Criar novo post
+- `/admin/edit-post/:id` - Editar post existente
+
+## 🛠️ Tecnologias
+
+- **React 19** - Framework principal
+- **React Router DOM** - Navegação
+- **Tailwind CSS** - Estilização
+- **Context API** - Gerenciamento de estado
+- **Fetch API** - Comunicação com backend
+
+## 🔗 API
+
+O frontend consome a API disponível em: `https://apiblogpost.onrender.com`
+
+### Endpoints utilizados:
+- `GET /v1/auth` - Obter token JWT
+- `GET /v1/posts` - Listar todos os posts
+- `GET /v1/posts/:id` - Buscar post por ID
+- `GET /v1/posts/search` - Buscar posts por critérios
+- `POST /v1/posts` - Criar novo post
+- `PUT /v1/posts/:id` - Atualizar post
+- `DELETE /v1/posts/:id` - Excluir post
+
+## 🚀 Como executar
+
+1. Instale as dependências:
+```bash
+npm install
+```
+
+2. Execute o servidor de desenvolvimento:
+```bash
+npm run dev
+```
+
+3. Acesse `http://localhost:5173`
+
+## 🔐 Autenticação
+
+Para acessar a área administrativa:
+- Acesse `/login`
+- **Email:** `g63888951@gmail.com`
+- **Senha:** `GrupoEstudos123@!`
+- O token JWT é obtido automaticamente
+
+## 📱 Responsividade
+
+A aplicação é totalmente responsiva e funciona em:
+- Desktop (1024px+)
+- Tablet (768px - 1023px)
+- Mobile (até 767px)
+
+## 🎨 Interface
+
+- Design moderno e limpo
+- Cores: Azul (#2563eb) como cor principal
+- Componentes reutilizáveis
+- Estados de loading e erro
+- Feedback visual para ações do usuário
+
+## 📂 Estrutura do Projeto
+
+```
+src/
+├── components/          # Componentes reutilizáveis
+│   ├── Card/           # PostCard
+│   ├── Footer/         # Rodapé
+│   ├── Menu/           # Menu de navegação
+│   └── Skeleton/       # Loading states
+├── contexts/           # Context API
+│   └── AuthContext.jsx # Gerenciamento de autenticação
+├── pages/              # Páginas da aplicação
+│   ├── Posts.jsx       # Lista de posts
+│   ├── PostDetail.jsx  # Detalhes do post
+│   ├── Login.jsx       # Autenticação
+│   ├── Admin.jsx       # Painel administrativo
+│   └── PostForm.jsx    # Formulário de posts
+├── services/           # Serviços
+│   ├── api.js          # Integração com API
+│   └── auth.js         # Autenticação JWT
+└── App.jsx             # Componente principal
+```
+
+## ✅ Requisitos Atendidos
+
+- ✅ React + Tailwind CSS
+- ✅ Hooks e componentes funcionais
+- ✅ Responsividade (mobile e desktop)
+- ✅ Integração com API (REST)
+- ✅ Gerenciamento de estado (Context API)
+- ✅ JWT para autenticação
+- ✅ Página principal (lista de posts)
+- ✅ Página de leitura de post
+- ✅ Criação de post
+- ✅ Edição de post
+- ✅ Página administrativa
+- ✅ Autenticação para professores
+- ✅ CRUD completo de posts
+- ✅ Campo de busca por palavra-chave
+
+## 🧹 Limpeza
+
+Foram removidos arquivos desnecessários do React:
+- Componentes Featured não utilizados
+- Componentes Sidebar não utilizados
+- Pastas vazias
+
+O projeto está otimizado e pronto para produção!
